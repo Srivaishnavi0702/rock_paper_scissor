@@ -1,6 +1,8 @@
 import random
+# Importing logo
 from art import rock, paper, scissors
 
+# Game starts
 print("Welcome to Rock Paper Scissors!")
 while True:
     user_moves =int(input("what do you choose?Type 0 for Rock,1 for Paper or 2 for Scissors: "))
@@ -13,6 +15,7 @@ while True:
         print("Computer Choose")
         print(computer_moves)
     
+    # Decide the winner
     if user_moves < 0 or user_moves > 2:
         print("you typed invalid number,You Lose!")
     elif computer_moves == rock and user_moves == 2:
@@ -30,6 +33,7 @@ while True:
     else:
         print("It's a draw!")
         
+    # Game Continuation
     next_round = input("Do you want to play again?Type yes or no: ").lower()
     if next_round == "yes":
         continue
